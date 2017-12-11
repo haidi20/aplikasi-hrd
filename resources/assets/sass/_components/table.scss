@@ -1,0 +1,146 @@
+.table{
+  thead{
+    tr{
+      .mar{
+        padding:0px 10px 30px 10px;
+      }
+    }
+  }
+}
+
+.table-custom{
+  thead th{
+    background: #E3F2FD;
+    border-bottom-color: #91d3ff;
+
+  }
+
+  th, td{
+    border-color: #91d3ff;
+  }
+
+  &.table-striped{
+    tr:nth-of-type(odd){
+      background-color: #FFF;
+    }
+    tr:nth-of-type(even){
+      background-color: rgba(0,0,0, .03);
+    }
+  }
+}
+
+.table-absen{
+  .has-select{
+    padding: 0;
+
+    select{
+      height: 26px;
+      border: 0;
+      outline: none;
+      text-align-last: center;
+    }
+  }
+
+  td{
+    &.IR, &.I{
+      select{
+        background: #FCD5B4;
+        color: #FFF;
+      }
+    }
+    &.S, &.S1{
+      select{
+        background: #92D050;
+        color: #FFF;
+        }
+      }
+    &.A, &.X{
+      select{
+        background: #FF0000;
+        color: #FFF ;
+      }
+    }
+    &.Mi, &.CT{
+      select{
+        background: #F79646;
+        color: #FFF;
+      }
+    }
+    &.L{
+      select{
+        background: #BFBFBF;
+        color: #FFF;
+      }
+    }
+    &.M{
+      select{
+        background: #00B0F0;
+        color: #FFF ;
+      }
+    }
+    &.OFF{
+      select{
+        background: #963634;
+        color: #FFF ;
+      }
+    }
+  }
+}
+
+.legend-absen{
+  span.I{
+    padding: 3px 5px;
+    color: #FFF;
+    background: #FCD5B4;
+  }
+  span.IR{
+    padding: 3px 5px;
+    color: #FFF;
+    background: #FCD5B4;
+  }
+  span.S{
+    padding: 3px 5px;
+    color: #FFF;
+    background: #92D050;
+  }
+  span.S1{
+    padding: 3px 5px;
+    color: #FFF;
+    background: #92D050;
+  }
+  span.A{
+    padding: 3px 5px ;
+    color: #FFF;
+    background: #FF0000;
+  }
+  span.X{
+    padding: 3px 5px ;
+    color: #FFF;
+    background: #FF0000;
+  }
+  span.Mi{
+    padding: 3px 5px;
+    color:#FFF;
+    background:#F79646;
+  }
+  span.CT{
+    padding: 3px 5px;
+    color:#FFF;
+    background:#F79646;
+  }
+  span.L{
+    padding: 3px 5px;
+    color: #FFF;
+    background: #BFBFBF ;
+  }
+  span.M{
+    padding: 3px 5px ;
+    color: #FFF;
+    background: #00B0F0 ;
+  }
+  span.OFF{
+    padding: 3px 5px ;
+    color: #FFF;
+    background: #963634 ;
+  }
+}

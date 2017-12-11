@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6">
+    <table>
+      <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td>{{$karyawan->biodata->nama_lengkap}}</td>
+      </tr>
+      <tr>
+        <td>NIK</td>
+        <td>:</td>
+        <td>{{$karyawan->nik}}</td>
+      </tr>
+      <tr>
+        <td>Posisi/Jabatan</td>
+        <td>:</td>
+        <td>{{$karyawan->jabatan->nama}}</td>
+      </tr>
+      <tr>
+        <td>Departemen</td>
+        <td>:</td>
+        <td>{{$karyawan->departemen->nama}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <table>
+      <tr>
+        <td>DOH</td>
+        <td>:</td>
+        <td>{{$sekarang->format('d-M-Y')}}</td>
+      </tr>
+      <tr>
+        <td>NPWP</td>
+        <td>:</td>
+        <td>{{$karyawan->npwp}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

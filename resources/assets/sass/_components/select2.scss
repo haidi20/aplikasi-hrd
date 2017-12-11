@@ -1,0 +1,23 @@
+/* select2 */
+@import "node_modules/select2/src/scss/core";
+
+.select2-container .select2-selection--single{
+  height: 33px;
+}
+
+.select2-container--default .select2-selection--single{
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border-color: #333333 transparent transparent transparent;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 31px;
+  width: 25px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+  padding: 0.15rem 1.75rem 0.15rem 0.75rem;
+}
