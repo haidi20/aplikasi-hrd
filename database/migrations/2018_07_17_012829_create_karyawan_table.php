@@ -22,6 +22,7 @@ class CreateKaryawanTable extends Migration
           $table->integer('setabsen_id')->unsigned();
 
           $table->string('golongan')->nullable();
+          $table->integer('nik')->nullable();
           $table->string('status')->nullable();
           $table->string('status_kerja')->nullable();
           $table->double('gapok')->default(0);

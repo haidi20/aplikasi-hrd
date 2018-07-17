@@ -17,13 +17,13 @@ class UsersTableSeeder extends Seeder
               'nama' =>'admin',
               'username' => 'admin',
               'email'   => 'cybersamarinda@gmail.com',
-              'password' => bcrypt('admin'),
+              'password' => bcrypt('samarinda'),
             ],
             [
               'nama' =>'ketua',
               'username' => 'ketua',
               'email' => 'ketua@email.com',
-              'password' => bcrypt('ketua'),
+              'password' => bcrypt('samarinda'),
             ]
         ]);
     }
