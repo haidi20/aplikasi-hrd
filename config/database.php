@@ -1,7 +1,5 @@
 <?php
 
-$db = 'heroku';
-
 return [
 
     /*
@@ -15,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', $db),
+    'default' => env('DB_CONNECTION', 'heroku'),
 
     /*
     |--------------------------------------------------------------------------
