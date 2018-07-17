@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class CreateBiodataTable extends Migration
 {
     /**
@@ -23,13 +21,11 @@ class CreateBiodataTable extends Migration
           $table->string('pendidikan')->nullable();
           $table->string('alamat')->nullable();
           $table->string('agama')->nullable();
+          $table->string('ktp')->nullable();
+          $table->date('akhir_ktp')->nullable();
           $table->timestamps();
-
-          /*$table->foreign('keluarga_id')->references('id')
-                ->on('keluarga')->onDelete('cascade');*/
       });
     }
-
     /**
      * Reverse the migrations.
      *

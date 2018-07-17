@@ -13,14 +13,15 @@ class CreateTambahanTable extends Migration
      */
     public function up()
     {
-        Schema::create('tambahan', function (Blueprint $table) {
-          $table->increments('id');
-          $table->integer('karyawan_id')->unsigned();
-          $table->string('kategori')->nullable();
-          $table->double('nominal')->default(0);
-          $table->date('tanggal')->nullable();
-          $table->timestamps();
-        });
+      Schema::create('tambahan', function (Blueprint $table) {
+        $table->increments('id');
+        $table->integer('karyawan_id')->unsigned();
+        $table->string('kategori')->nullable();
+        $table->double('nominal')->default(0);
+        $table->date('tanggal')->nullable();
+        $table->string('keterangan')->nullable();
+        $table->timestamps();
+      });
     }
 
     /**

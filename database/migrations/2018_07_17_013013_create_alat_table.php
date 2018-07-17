@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterKaryawanPhase4 extends Migration
+class CreateAlatTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class AlterKaryawanPhase4 extends Migration
      */
     public function up()
     {
-        Schema::table('karyawan', function (Blueprint $table) {
-            $table->string('foto')->nullable();
-        });
+      Schema::create('alat', function (Blueprint $table) {
+           $table->increments('id');
+           $table->string('nama');
+           $table->string('status');
+           $table->string('kategori')->nullable();
+           $table->timestamps();
+       });
     }
 
     /**
@@ -25,8 +29,6 @@ class AlterKaryawanPhase4 extends Migration
      */
     public function down()
     {
-        Schema::table('karyawan', function (Blueprint $table) {
-            $table->dropColumn('foto');
-        });
+        Schema::dropIfExists('alat');
     }
 }

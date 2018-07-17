@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKeluargaTable extends Migration
+class CreatePotonganTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateKeluargaTable extends Migration
      */
     public function up()
     {
-      Schema::create('keluarga', function (Blueprint $table) {
+      Schema::create('potongan', function (Blueprint $table) {
           $table->increments('id');
-          $table->integer('biodata_id')->unsigned();
-          $table->string('jenis')->nullable(); // Istri, Anak, 
-          $table->string('nama')->nullable();
-          $table->date('tanggal_lahir')->nullable();
+          $table->integer('karyawan_id')->unsigned();
+          $table->string('kategori')->nullable();
+          $table->double('nominal')->nullable();
+          $table->date('tanggal')->nullable();
+          $table->string('keterangan')->nullable();
           $table->timestamps();
       });
     }
@@ -30,6 +31,6 @@ class CreateKeluargaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keluarga');
+        Schema::dropIfExists('potongan');
     }
 }

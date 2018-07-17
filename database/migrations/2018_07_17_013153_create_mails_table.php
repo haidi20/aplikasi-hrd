@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterKaryawanPhase1 extends Migration
+class CreateMailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AlterKaryawanPhase1 extends Migration
      */
     public function up()
     {
-        Schema::table('karyawan', function (Blueprint $table) {
-            $table->integer('trip_id')->unsigned();
-        });
+      Schema::create('mails', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('email', 100)->unique();
+          $table->timestamps();
+      });
     }
 
     /**
@@ -25,8 +27,6 @@ class AlterKaryawanPhase1 extends Migration
      */
     public function down()
     {
-        Schema::table('karyawan', function (Blueprint $table) {
-            $table->dropColumn('trip_id') ;
-        });
+        Schema::dropIfExists('mails');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterBiodataPhase1 extends Migration
+class CreateWaktuTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class AlterBiodataPhase1 extends Migration
      */
     public function up()
     {
-        Schema::table('biodata', function($table){
-            $table->string('ktp')->nullable();
-            $table->date('akhir_ktp')->nullable();
-        });
+      Schema::create('waktu', function (Blueprint $table) {
+         $table->increments('id');
+         $table->integer('hauling_id');
+         $table->time('jam')->nullable();
+         $table->double('tonase')->default(0);
+         $table->timestamps();
+     });
     }
 
     /**
@@ -26,9 +29,6 @@ class AlterBiodataPhase1 extends Migration
      */
     public function down()
     {
-        Schema::table('biodata', function($table){
-            $table->dropColumn('ktp');
-            $table->dropColumn('akhir_ktp');
-        });
+        Schema::dropIfExists('waktu');
     }
 }

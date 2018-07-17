@@ -13,11 +13,12 @@ class CreateSiteTable extends Migration
      */
     public function up()
     {
-        Schema::create('site', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('lokasi');
-            $table->timestamps();
-        });
+      Schema::create('site', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('lokasi')->nullable();
+          $table->string('kode')->nullable();
+          $table->timestamps();
+      });
     }
 
     /**

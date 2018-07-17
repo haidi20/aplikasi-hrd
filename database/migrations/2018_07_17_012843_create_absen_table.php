@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterHaulingPhase1 extends Migration
+class CreateAbsenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AlterHaulingPhase1 extends Migration
      */
     public function up()
     {
-      Schema::table('hauling', function (Blueprint $table) {
-          $table->double('total')->default(0);
+      Schema::create('absen', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('karyawan_id')->unsigned();
+          $table->date('tanggal')->nullable();
+          $table->string('status')->nullable();
+          $table->timestamps();
       });
     }
 
@@ -25,6 +29,6 @@ class AlterHaulingPhase1 extends Migration
      */
     public function down()
     {
-        $table->dropColumn('total');
+        Schema::dropIfExists('absen');
     }
 }
